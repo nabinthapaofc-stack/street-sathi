@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="py-12 bg-foreground text-background">
@@ -18,12 +20,12 @@ const Footer = () => {
 
           <div className="flex items-center gap-4 text-sm text-background/60">
             <span>© 2024 StreetSathi</span>
-            <a
-              href="#donate"
+            <Link
+              to="/donate"
               className="px-4 py-2 rounded-lg bg-primary text-primary-foreground font-semibold shadow hover:shadow-lg transition"
             >
               Donate Now
-            </a>
+            </Link>
           </div>
         </div>
       </div>

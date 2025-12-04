@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import streetDog1 from "@/assets/street-dog-1.jpg";
 import streetDog2 from "@/assets/street-dog-2.jpg";
 import streetDogs3 from "@/assets/street-dogs-3.jpg";
@@ -27,14 +28,15 @@ const HeroSection = () => {
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <Button
+                asChild
                 variant="heroOutline"
                 size="xl"
                 className="bg-white text-primary border-white/80 shadow-xl !hover:bg-white !hover:text-primary"
               >
-                Rescue Now
+                <Link to="/donate">Rescue Now</Link>
               </Button>
-              <Button variant="hero" size="xl">
-                Donate Now
+              <Button asChild variant="hero" size="xl">
+                <Link to="/donate">Donate Now</Link>
               </Button>
             </div>
           </div>

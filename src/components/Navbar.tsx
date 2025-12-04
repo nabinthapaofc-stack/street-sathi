@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -45,7 +46,7 @@ const Navbar = () => {
         </div>
 
         <Button variant="hero" size="sm" asChild>
-          <a href="#donate">Rescue Now</a>
+          <Link to="/donate">Rescue Now</Link>
         </Button>
       </div>
     </nav>
