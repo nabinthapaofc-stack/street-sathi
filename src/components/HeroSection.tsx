@@ -12,7 +12,7 @@ const HeroSection = () => {
           {/* Text Content */}
           <div className="space-y-6 opacity-0 animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground leading-tight">
-              StreetSathi —{" "}
+              Street साथी —{" "}
               <span className="text-primary relative">
                 Every Street Deserves to Live
                 <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 300 12" fill="none">
