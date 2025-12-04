@@ -5,11 +5,7 @@ import streetDogs3 from "@/assets/street-dogs-3.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen pt-24 pb-16 flex items-center relative overflow-hidden animated-bg">
-      {/* Animated background blobs */}
-      <div className="absolute top-20 -left-20 w-72 h-72 bg-primary/10 rounded-full mix-blend-multiply filter blur-3xl animate-blob" />
-      <div className="absolute top-40 right-20 w-72 h-72 bg-accent/30 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000" />
-      <div className="absolute -bottom-20 left-1/3 w-72 h-72 bg-secondary/40 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000" />
+    <section id="donate" className="min-h-screen pt-24 pb-16 flex items-center relative overflow-hidden animated-bg">
 
       <div className="container relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -30,11 +26,15 @@ const HeroSection = () => {
               dogs.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
-              <Button variant="hero" size="xl">
+              <Button
+                variant="heroOutline"
+                size="xl"
+                className="bg-white text-primary border-white/80 shadow-xl !hover:bg-white !hover:text-primary"
+              >
                 Rescue Now
               </Button>
-              <Button variant="heroOutline" size="xl">
-                Learn More
+              <Button variant="hero" size="xl">
+                Donate Now
               </Button>
             </div>
           </div>
@@ -69,13 +69,6 @@ const HeroSection = () => {
                 <div className="absolute inset-0 rounded-xl bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
             </div>
-            {/* Decorative floating elements */}
-            <div className="absolute -top-6 -right-6 w-28 h-28 bg-primary/15 rounded-full blur-2xl animate-pulse" />
-            <div className="absolute -bottom-6 -left-6 w-36 h-36 bg-accent/30 rounded-full blur-2xl animate-pulse" style={{ animationDelay: "1s" }} />
-            
-            {/* Floating paw prints */}
-            <div className="absolute top-4 right-4 text-primary/20 text-4xl animate-bounce" style={{ animationDelay: "0.5s" }}>🐾</div>
-            <div className="absolute bottom-8 left-4 text-primary/15 text-2xl animate-bounce" style={{ animationDelay: "1.5s" }}>🐾</div>
           </div>
         </div>
       </div>

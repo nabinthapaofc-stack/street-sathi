@@ -1,12 +1,14 @@
-import { Heart } from "lucide-react";
-
 const Footer = () => {
   return (
     <footer className="py-12 bg-foreground text-background">
       <div className="container">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-2 text-xl font-bold">
-            <Heart className="w-6 h-6 text-primary fill-primary" />
+          <div className="flex items-center gap-3 text-xl font-bold">
+            <img
+              src="/logo.png"
+              alt="Street Sathi logo"
+              className="w-12 h-12 object-contain drop-shadow"
+            />
             <span>StreetSathi</span>
           </div>
 
@@ -16,6 +18,12 @@ const Footer = () => {
 
           <div className="flex items-center gap-4 text-sm text-background/60">
             <span>© 2024 StreetSathi</span>
+            <a
+              href="#donate"
+              className="px-4 py-2 rounded-lg bg-primary text-primary-foreground font-semibold shadow hover:shadow-lg transition"
+            >
+              Donate Now
+            </a>
           </div>
         </div>
       </div>
