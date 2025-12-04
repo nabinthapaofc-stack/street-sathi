@@ -21,8 +21,8 @@ const Navbar = () => {
       )}
     >
       <div className="container flex items-center justify-between h-16">
-        <a
-          href="#"
+        <Link
+          to="/"
           className="flex items-center text-foreground transition-transform duration-300 hover:scale-105"
           aria-label="StreetSathi home"
         >
@@ -31,18 +31,18 @@ const Navbar = () => {
             alt="Street Sathi logo"
             className="w-20 h-20 -my-2 object-contain drop-shadow"
           />
-        </a>
+        </Link>
 
         <div className="hidden md:flex items-center gap-8">
-          <a href="#about" className="text-muted-foreground hover:text-primary transition-colors font-medium">
+          <Link to="/#about" className="text-muted-foreground hover:text-primary transition-colors font-medium">
             About
-          </a>
-          <a href="#partners" className="text-muted-foreground hover:text-primary transition-colors font-medium">
+          </Link>
+          <Link to="/#partners" className="text-muted-foreground hover:text-primary transition-colors font-medium">
             Partners
-          </a>
-          <a href="#mission" className="text-muted-foreground hover:text-primary transition-colors font-medium">
+          </Link>
+          <Link to="/#mission" className="text-muted-foreground hover:text-primary transition-colors font-medium">
             Mission
-          </a>
+          </Link>
         </div>
 
         <Button variant="hero" size="sm" asChild>

@@ -1,27 +1,15 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { useNavigate } from "react-router-dom";
 
 const Donate = () => {
-  const navigate = useNavigate();
-  const [isMuted, setIsMuted] = useState(false);
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
     const timeout = window.setTimeout(() => setIsReady(true), 60);
     return () => window.clearTimeout(timeout);
-  }, []);
-
-  const handleDonateClick = useCallback(() => {
-    navigate("/donate");
-  }, [navigate]);
-
-  const toggleMute = useCallback(() => {
-    setIsMuted((prev) => !prev);
   }, []);
 
   return (
@@ -43,21 +31,6 @@ const Donate = () => {
             Every rupee helps us rescue, treat, and rehabilitate more street companions across Nepal. Scan the QR or
             use the bank details below to keep lifesaving work moving.
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-            <Button
-              type="button"
-              variant="ghost"
-              size="sm"
-              onClick={toggleMute}
-              className="border border-primary/30 text-primary hover:bg-primary/10"
-              aria-pressed={isMuted}
-            >
-              {isMuted ? "Unmute Effects" : "Mute Effects"}
-            </Button>
-            <Button type="button" variant="hero" size="sm" onClick={handleDonateClick}>
-              Donate Now
-            </Button>
-          </div>
         </section>
 
         <section className="max-w-5xl mx-auto mt-10 grid gap-6 md:gap-8 md:grid-cols-2">
@@ -72,9 +45,6 @@ const Donate = () => {
             <p className="text-[#4a5d55] text-sm mt-5">
               Open your preferred mobile banking app, scan the QR code, and confirm your contribution in seconds.
             </p>
-            <Button type="button" variant="hero" size="lg" className="mt-6" onClick={handleDonateClick}>
-              Donate Now
-            </Button>
           </article>
 
           <article className="bg-white rounded-[28px] shadow-2xl shadow-primary/10 border border-white/80 p-8">
